@@ -1,6 +1,6 @@
 # Food Recipe Website
 
-This project is a front-end engineer intern assessment test for applying to cmlabs. It is a food recipe website built using Next.js, React, Tailwind CSS, and TypeScript. The website allows users to search and filter recipes and has a responsive design for both mobile and desktop devices.
+This project is a front-end engineer intern assessment test for applying to cmlabs. It is a food recipe website built using Next.js, React, Tailwind CSS, and TypeScript. The website allows users to view food categories and see food list for each category and has a responsive design for both mobile and desktop devices.
 
 ## Technologies Used
 
@@ -11,7 +11,7 @@ This project is a front-end engineer intern assessment test for applying to cmla
 
 ## Features
 
-- Food meals search and filtering.
+- Displays food categories and a list of foods for each category from the API.
 - Responsive design for mobile and desktop devices.
 
 ## Getting Started
