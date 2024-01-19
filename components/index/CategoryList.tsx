@@ -1,4 +1,4 @@
-import Image from "next/image";
+import FoodCard from "../global/FoodCard";
 
 type Category = {
   idCategory: string;
@@ -9,7 +9,8 @@ type Category = {
 
 async function getAllCategory() {
   const res = await fetch(
-    "https://www.themealdb.com/api/json/v1/1/categories.php"
+    "https://www.themealdb.com/api/json/v1/1/categories.php",
+    { cache: "force-cache" }
   );
   if (!res.ok) {
     throw new Error("Something went wrong");
@@ -21,29 +22,16 @@ async function getAllCategory() {
 export default async function CategoryList() {
   const data = await getAllCategory();
   return (
-    <>
+    <div className="px-4 py-5 sm:px-8 grid max-md:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 justify-items-center w-max">
       {data.categories.map((category: Category) => (
-        <div
+        <FoodCard
           key={category.idCategory}
-          className="rounded-xl relative w-max flex justify-center items-center"
-        >
-          <p className="text-xl w-full h-full absolute bg-black/50 rounded-xl text-white flex flex-col justify-center items-center">
-            {category.strCategory}
-          </p>
-          <Image
-            src={category.strCategoryThumb}
-            alt={category.strCategory}
-            width={200}
-            height={200}
-            sizes="100vw"
-            className="rounded-xl object-cover object-center"
-            style={{
-              width: "100%",
-              height: "auto",
-            }}
-          />
-        </div>
+          id={category.idCategory}
+          title={category.strCategory}
+          thumb={category.strCategoryThumb}
+          ver="categoryList"
+        />
       ))}
-    </>
+    </div>
   );
 }

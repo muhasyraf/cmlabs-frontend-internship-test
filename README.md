@@ -1,6 +1,6 @@
-# Food Recipe Sharing Website
+# Food Recipe Website
 
-This is a web application for sharing and discovering food recipes. Users can browse recipes from other users and interact with the community.
+This project is a front-end engineer intern assessment test for applying to cmlabs. It is a food recipe website built using Next.js, React, Tailwind CSS, and TypeScript. The website allows users to search and filter recipes and has a responsive design for both mobile and desktop devices.
 
 ## Technologies Used
 
@@ -11,38 +11,40 @@ This is a web application for sharing and discovering food recipes. Users can br
 
 ## Features
 
-- Recipe search and filtering.
+- Food meals search and filtering.
 - Responsive design for mobile and desktop devices.
 
 ## Getting Started
 
-To get started with the development of this project, follow these steps:
+To get a local copy up and running, follow these steps:
 
 1. Clone the repository:
+   ```bash
+   git clone https://github.com/muhasyraf/cmlabs-frontend-internship-test.git   
+   ```
+2. Install the dependencies. I recommend using yarn to avoid any dependency issues. If you don't have yarn installed, you can install it with npm install -g yarn. If you prefer not to use yarn, you can use npm with the --legacy-peer-deps flag.
+
+Using yarn:
+   ```bash
+   cd cmlabs-frontend-internship-test
+   yarn add
+   ```
+
+Using npm with --legacy-peer-deps:
+   ```bash
+    cd your-project
+    npm install --legacy-peer-deps
+   ```
+
+3. Start the local development server:
+
+   ```bash
+   yarn dev
+   ```
+   or
 
     ```bash
-    git clone https://github.com/muhasyraf/cmlabs-frontend-internship-test.git
-    ```
-
-2. Install the dependencies:
-
-    ```bash
-    cd food-recipe-sharing
-    npm install
-    ```
-
-3. Start the development server:
-
-    ```bash
-    npm run dev
-    ```
-
-4. Open your browser and visit `http://localhost:3000` to see the application.
-
-## Contributing
-
-Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the ...
+   npm run dev
+   ```
+## Thank You!
+Built by Asyraf.

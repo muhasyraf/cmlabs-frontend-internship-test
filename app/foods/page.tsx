@@ -1,11 +1,10 @@
-import Hero from "@/components/index/Hero";
 import CategoryList from "@/components/index/CategoryList";
-
+import Header from "@/components/foods/Header";
 export default function Home() {
   return (
-    <div className="flex flex-col items-center">
-      <Hero />
+    <>
+      <Header />
       <CategoryList />
-    </div>
+    </>
   );
 }

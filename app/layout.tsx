@@ -3,6 +3,7 @@ import { Rubik } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import "@/styles/globals.css";
 import MobileNavbar from "@/components/layout/MobileNavbar";
+import NextTopLoader from "nextjs-toploader";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body
         className={`${rubik.className} m-auto flex flex-col items-center justify-start overflow-auto md:overflow-visible`}
       >
+        <NextTopLoader color="#ff4747" height={2} />
         <div className="hidden sm:block z-50 sticky top-0 left-0 right-0 w-full">
           <Navbar />
         </div>

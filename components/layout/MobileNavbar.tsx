@@ -31,7 +31,7 @@ export default function MobileNavbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 w-full z-50 rounded-b-3xl">
+    <nav className="fixed top-0 w-full z-50 rounded-b-xl backdrop-blur-md bg-[#ffffffb9] border border-b-2">
       <div
         className={`w-full justify-between flex items-center ${
           isMenuRendered && "bg-transparent"
@@ -54,7 +54,7 @@ export default function MobileNavbar() {
       </div>
       {isMenuMounted && (
         <ul
-          className={`menu flex flex-col absolute bg-[#121d24]
+          className={`menu flex flex-col absolute bg-gray-500
             ${isMenuRendered && "menuRendered"}`}
         >
           {Routes.map((item, index) => {
@@ -64,7 +64,7 @@ export default function MobileNavbar() {
                 className="border-b border-gray-900 text-gray-100 text-sm font-semibold"
                 style={{ transitionDelay: `${150 + index * 25}ms` }}
               >
-                <Link href={item.path}>
+                <Link href={item.path} data-hide={!isMenuOpen}>
                   <span className="flex w-auto pb-4">{item.title}</span>
                 </Link>
               </li>
