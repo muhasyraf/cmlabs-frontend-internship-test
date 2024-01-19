@@ -32,7 +32,7 @@ Using yarn:
 
 Using npm with --legacy-peer-deps:
    ```bash
-    cd your-project
+    cd cmlabs-frontend-internship-test
     npm install --legacy-peer-deps
    ```
 
